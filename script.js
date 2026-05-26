@@ -11,9 +11,16 @@ const apiKey = "59VNKM2L9TBEKL54GAS66S4W6";
 const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/`;
 
 searchBtn.addEventListener("click", (event) => {
-    const desiredLocation = searchBar.value;
+    const desiredLocation = searchBar.value.trim();
+
+    if (!desiredLocation) {
+        cityName.textContent = "Please enter a city name";
+        showText(cityName);
+        return;
+    }
+
     searchWeather(desiredLocation);
-    cityName.innerHTML = desiredLocation;
+    cityName.textContent = desiredLocation;
 });
 
 async function searchWeather(location) {
@@ -38,19 +45,19 @@ function displayWeather(data) {
 
     showText(cityName);
 
-    weatherConditions.innerHTML = currentWeather.conditions;
+    weatherConditions.textContent = currentWeather.conditions;
     showText(weatherConditions);
 
-    cityTemp.innerHTML = currentWeather.temp + "°C";
+    cityTemp.textContent = currentWeather.temp + "°C";
     showText(cityTemp);
 
-    cityWind.innerHTML = "Wind speed: " + currentWeather.windspeed;
+    cityWind.textContent = "Wind speed: " + currentWeather.windspeed;
     showText(cityWind);
 
-    humidity.innerHTML = "Humidity: " + currentWeather.humidity;
+    humidity.textContent = "Humidity: " + currentWeather.humidity;
     showText(humidity);
 
-    uvIndex.innerHTML = "UV Index: " + currentWeather.uvindex;
+    uvIndex.textContent = "UV Index: " + currentWeather.uvindex;
     showText(uvIndex);
 }
 
