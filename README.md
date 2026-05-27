@@ -52,4 +52,4 @@ This project currently uses a client-side API keyt for learning purposes.
 In a production environment, API requests should be handled through a backend function to avoid exposing sensitive keys.
 
 ## Live Demo
-[View the project here] (https://ukrainska.github.io/restaurant-page/)
+[View the project here](https://ukrainska.github.io/weather-app/)
