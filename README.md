@@ -9,7 +9,7 @@ The app allows users to search for a city and displays current weather informati
 - Display current temperature
 - Display wind speed
 - Display humidity
-- Display UX index
+- Display UV index
 - Display current weather conditions
 - Fetch weather data from an external API
 
@@ -48,7 +48,7 @@ Another challenge was working with asynchronous code and making sure the weather
 
 ## Security Note
 
-This project currently uses a client-side API keyt for learning purposes.
+This project currently uses a client-side API key for learning purposes.
 In a production environment, API requests should be handled through a backend function to avoid exposing sensitive keys.
 
 ## Live Demo
